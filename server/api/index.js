@@ -1,7 +1,6 @@
 'use strict';
 
 const router = require('express').Router();
-const Candy = require('../db/models/Candy');
 
 // Your routes go here!
 // NOTE: Any routes that you put here are ALREADY mounted on `/api`
@@ -15,14 +14,7 @@ const Candy = require('../db/models/Candy');
 // And for your `/api/kittens` routes:
 // router.use('/kittens', require('./kittens'))
 
-router.get('/candies', async (req, res, next) => {
-  try {
-    const candies = await Candy.findAll();
-    res.send(candies);
-  } catch (err) {
-    next(err);
-  }
-});
+router.use('/candies', require('./candies'));
 
 // If someone makes a request that starts with `/api`,
 // but you DON'T have a corresponding router, this piece of
