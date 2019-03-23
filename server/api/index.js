@@ -14,7 +14,7 @@ const router = require('express').Router();
 // And for your `/api/kittens` routes:
 // router.use('/kittens', require('./kittens'))
 
-router.use('/candies', require('./candies'));
+router.use('/candies', require('./candiesRouter'));
 
 // If someone makes a request that starts with `/api`,
 // but you DON'T have a corresponding router, this piece of

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Candy = require('../db/models/Candy');
+const Candy = require('../db/models/CandyModel');
 
 router.get('/', async (req, res, next) => {
   try {
